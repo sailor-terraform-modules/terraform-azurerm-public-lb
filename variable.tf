@@ -1,39 +1,39 @@
 //load_balancer 
 
 variable "ip_version" {
-    type = string
-    description = "The IP Version to use"
-    default = "IPv4"
+  type        = string
+  description = "The IP Version to use"
+  default     = "IPv4"
 }
 
 variable "public_ip_sku" {
   description = "The SKU Tier that should be used for the Public IP. Possible values are Regional and Global"
   type        = string
-  default = "Standard"
+  default     = "Standard"
 }
 
 variable "public_ip_sku_tier" {
   description = "The SKU Tier that should be used for the Public IP. Possible values are Regional and Global, NOTE ---- When sku_tier is set to Global, sku must be set to Standard"
   type        = string
-  default = "Regional"
+  default     = "Regional"
 }
 
 variable "allocation_method" {
-    type = string
-    description = "Defines the allocation method for this IP address. Possible values are Static or Dynamic"
-    default = "Static"
+  type        = string
+  description = "Defines the allocation method for this IP address. Possible values are Static or Dynamic"
+  default     = "Static"
 }
 
 variable "lb_sku" {
-    type = string
-    description = "The SKU of the Azure Load Balancer. Accepted values are Basic, Standard and Gateway. Defaults to Basic"
-    default = "Standard"
+  type        = string
+  description = "The SKU of the Azure Load Balancer. Accepted values are Basic, Standard and Gateway. Defaults to Basic"
+  default     = "Standard"
 }
 
 variable "lb_sku_tier" {
-    type = string
-    description = "The SKU tier of this Load Balancer. Possible values are Global and Regional. Defaults to Regional"
-    default = "Regional"
+  type        = string
+  description = "The SKU tier of this Load Balancer. Possible values are Global and Regional. Defaults to Regional"
+  default     = "Regional"
 }
 
 # virtual_machine
@@ -53,17 +53,17 @@ variable "resource_group_name" {
 }
 
 variable "network_interface" {
-    type = string
-    description = "(optional) describe your variable"
+  type        = string
+  description = "(optional) describe your variable"
 }
 
 variable "probe_ports" {
-  type = number
+  type        = number
   description = "(optional) describe your variable"
-  default = "443"
+  default     = "443"
 }
 
 variable "nic_frontend_ip_name" {
-  type = string
+  type        = string
   description = "(optional) describe your variable"
 }
